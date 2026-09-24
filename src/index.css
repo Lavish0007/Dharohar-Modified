@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  html, body {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #090514;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+}
+
+/* Custom Gold & Purple gradients */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #fff3b0 0%, #f6c344 40%, #ffdf00 60%, #c48b15 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to right, #ffd700, #ffb703, #996515) 1;
+}
+
+.gold-glow {
+  filter: drop-shadow(0 0 35px rgba(246, 195, 68, 0.4)) drop-shadow(0 0 70px rgba(124, 58, 237, 0.25));
+}
+
+.gold-glow-subtle {
+  filter: drop-shadow(0 0 15px rgba(246, 195, 68, 0.25));
+}
+
+.nav-link {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ffd700, #f59e0b);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 9999px;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 80%;
+}
+
+/* Staggered animation delay utility classes */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+
+/* Backdrop blur fallback */
+@supports not (backdrop-filter: blur(12px)) {
+  .glass-panel {
+    background-color: rgba(18, 10, 38, 0.95);
+  }
+}
+
+/* Dynamic cursor-reactive gradient card border and spotlight effect */
+.cursor-gradient-card {
+  position: relative;
+  background: rgba(23, 12, 48, 0.72);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.cursor-gradient-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(255, 0, 212, 0.25), 0 0 20px rgba(124, 58, 237, 0.2);
+}
+
+.cursor-gradient-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: radial-gradient(
+    320px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 0, 212, 0.8),
+    rgba(245, 195, 68, 0.5),
+    rgba(124, 58, 237, 0.3),
+    transparent 80%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.cursor-gradient-card:hover::before {
+  opacity: 1;
+}
+
+.cursor-gradient-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    280px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 0, 212, 0.1),
+    rgba(124, 58, 237, 0.08),
+    transparent 70%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cursor-gradient-card:hover::after {
+  opacity: 1;
+}
+
+/* Moving gradient animated text */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient-text {
+  background: linear-gradient(135deg, #ff00d4 0%, #ec4899 35%, #f59e0b 70%, #ff00d4 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 5s ease infinite;
+}
+

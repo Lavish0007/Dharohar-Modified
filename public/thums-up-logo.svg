@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60" fill="none">
+  <!-- Thums Up Iconic Red Ribbon / Banner -->
+  <path d="M6 14 C6 10, 10 6, 16 6 L184 6 C190 6, 194 10, 194 14 L188 46 C188 50, 184 54, 178 54 L12 54 C6 54, 2 50, 2 46 Z" fill="#e31837" />
+  
+  <!-- Left Side White/Blue Thumbs Up Gesture Icon -->
+  <g transform="translate(14, 13)">
+    <!-- Blue shadow/outline -->
+    <path d="M12 2 C12 0, 16 0, 16 5 L16 12 C18 12, 20 12.5, 20 14.5 C20 16, 19 17, 20 18 C21 19, 21 20.5, 19.5 21.5 C20 22.5, 19.5 24, 18 24.5 C17 25, 14 25, 10 25 C6 25, 4 23, 4 19 L4 12 C4 9, 8 7, 9 4 C10 2, 12 3, 12 2 Z" fill="#002b80" />
+    <!-- White Thumbs Up Hand -->
+    <path d="M10 2 C10 0.5, 14 0.5, 14 5 L14 11 C16 11, 18 11.5, 18 13.5 C18 15, 17 16, 18 17 C19 18, 19 19.5, 17.5 20.5 C18 21.5, 17.5 23, 16 23.5 C15 24, 12 24, 8 24 C5 24, 3 22, 3 18 L3 11 C3 8, 6 6, 7 3.5 C8 1.5, 10 2.5, 10 2 Z" fill="#ffffff" />
+  </g>
+
+  <!-- "THUMS UP" Bold Dynamic Typography -->
+  <text x="44" y="32" font-family="'Plus Jakarta Sans', Impact, system-ui, sans-serif" font-size="20" font-style="italic" font-weight="900" fill="#ffffff" letter-spacing="0.5">
+    THUMS
+  </text>
+  <text x="122" y="32" font-family="'Plus Jakarta Sans', Impact, system-ui, sans-serif" font-size="20" font-style="italic" font-weight="900" fill="#002b80" letter-spacing="0.5">
+    UP
+  </text>
+
+  <!-- Tagline Banner -->
+  <text x="46" y="47" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="7.5" font-weight="800" fill="#fef08a" letter-spacing="1.5">
+    TASTE THE THUNDER
+  </text>
+</svg>

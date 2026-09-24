@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" width="240" height="70" fill="none">
+  <!-- boAt iconic red sail / triangle glyph -->
+  <polygon points="28,12 50,56 6,56" fill="#e21b22" />
+  <polygon points="28,26 42,54 14,54" fill="#16082b" />
+  <polygon points="28,34 37,52 19,52" fill="#e21b22" />
+  
+  <!-- "boAt" wordmark -->
+  <text x="64" y="52" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="44" font-weight="900" fill="#ffffff" letter-spacing="-1">
+    bo<tspan fill="#e21b22">A</tspan>t
+  </text>
+  
+  <!-- "lifestyle" subtext -->
+  <text x="66" y="66" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="700" fill="#a855f7" letter-spacing="4">
+    LIFESTYLE
+  </text>
+</svg>
