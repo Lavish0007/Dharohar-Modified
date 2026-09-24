@@ -74,10 +74,10 @@ export default function FestModal({ activeModal, onClose }) {
 
       {/* Modal Dialog Card */}
       <div 
-        className="relative w-full max-w-4xl max-h-[85vh] flex flex-col bg-[#12082b] border border-purple-800/60 rounded-2xl sm:rounded-3xl shadow-[0_10px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(245,195,68,0.15)] overflow-hidden animate-fade-in z-10"
+        className="relative w-full max-w-4xl max-h-[85vh] flex flex-col glass-card-featured rounded-2xl sm:rounded-3xl overflow-hidden animate-fade-in z-10"
       >
         {/* Modal Header */}
-        <div className="flex items-center justify-between px-6 py-4 sm:px-8 sm:py-5 border-b border-purple-800/40 bg-[#160a35]/90 flex-shrink-0">
+        <div className="flex items-center justify-between px-6 py-4 sm:px-8 sm:py-5 border-b border-white/10 bg-white/[0.03] backdrop-blur-md flex-shrink-0">
           <div className="flex items-center gap-3">
             <span className="w-2.5 h-2.5 rounded-full bg-amber-400 shadow-[0_0_10px_rgba(245,195,68,0.8)]" />
             <h2 className="font-cinzel text-lg sm:text-2xl font-bold tracking-wider text-amber-200">
@@ -104,7 +104,7 @@ export default function FestModal({ activeModal, onClose }) {
           {/* 1. ABOUT FESTIVAL */}
           {activeModal === 'about' && (
             <div className="space-y-6 text-sm sm:text-base leading-relaxed">
-              <div className="p-4 sm:p-6 rounded-xl bg-purple-950/40 border border-purple-700/40 flex flex-col md:flex-row items-center gap-6">
+              <div className="p-4 sm:p-6 rounded-xl glass-card flex flex-col md:flex-row items-center gap-6">
                 <img
                   src="/dharohar-logo.png"
                   alt="Dharohar Fest Logo"
@@ -124,7 +124,7 @@ export default function FestModal({ activeModal, onClose }) {
 
               {/* Fest Highlights Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2">
-                <div className="p-4 rounded-xl bg-purple-900/20 border border-purple-800/40">
+                <div className="p-4 rounded-xl glass-card-subtle">
                   <div className="text-amber-400 font-semibold mb-1 flex items-center gap-2">
                     <Sparkles className="w-4 h-4" /> Grand Attractions
                   </div>
@@ -133,7 +133,7 @@ export default function FestModal({ activeModal, onClose }) {
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-purple-900/20 border border-purple-800/40">
+                <div className="p-4 rounded-xl glass-card-subtle">
                   <div className="text-amber-400 font-semibold mb-1 flex items-center gap-2">
                     <Trophy className="w-4 h-4" /> 40+ Competitions
                   </div>
@@ -142,7 +142,7 @@ export default function FestModal({ activeModal, onClose }) {
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-purple-900/20 border border-purple-800/40">
+                <div className="p-4 rounded-xl glass-card-subtle">
                   <div className="text-amber-400 font-semibold mb-1 flex items-center gap-2">
                     <Users className="w-4 h-4" /> Star Celebrity Night
                   </div>
@@ -268,7 +268,7 @@ export default function FestModal({ activeModal, onClose }) {
                 {[
                   { name: 'boAt Lifestyle', logo: '/boat-logo.svg', tag: 'Official Audio Partner' },
                   { name: 'Spotify India', logo: 'https://www.logo.wine/a/logo/Spotify/Spotify-Logo.wine.svg', tag: 'Streaming Partner' },
-                  { name: 'Thums Up', logo: '/thums-up-logo.svg', tag: 'Beverage Partner' },
+                  { name: 'Coca-Cola', logo: '/Coca-Cola', tag: 'Beverage Partner' },
                   { name: 'Zomato', logo: 'https://logos-world.net/wp-content/uploads/2020/11/Zomato-Logo.png', tag: 'Food Partner' },
                   { name: 'Paytm', logo: 'https://download.logo.wine/logo/Paytm/Paytm-Logo.wine.png', tag: 'Payments Partner' },
                   { name: 'Hostinger', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Hostinger_Logo.png', tag: 'Web Hosting Partner' },
@@ -276,7 +276,7 @@ export default function FestModal({ activeModal, onClose }) {
 
                   <div
                     key={idx}
-                    className="p-5 rounded-2xl bg-purple-950/40 border border-purple-800/40 flex flex-col items-center justify-center text-center hover:border-amber-400/60 hover:bg-purple-900/30 transition-all duration-300"
+                    className="p-5 rounded-2xl glass-card flex flex-col items-center justify-center text-center hover:border-amber-400/60 transition-all duration-300"
                   >
                     <div className="h-14 flex items-center justify-center mb-3">
                       <img
@@ -305,7 +305,7 @@ export default function FestModal({ activeModal, onClose }) {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {/* Student Pass */}
-                <div className="p-5 rounded-2xl bg-purple-950/40 border border-purple-800/50 flex flex-col justify-between hover:border-amber-400/50 transition-all">
+                <div className="p-5 rounded-2xl glass-card flex flex-col justify-between hover:border-amber-400/50 transition-all">
                   <div>
                     <span className="text-xs uppercase tracking-wider text-purple-300">College Student</span>
                     <h4 className="font-cinzel text-xl font-bold text-amber-300 mt-1">General Pass</h4>
@@ -322,7 +322,7 @@ export default function FestModal({ activeModal, onClose }) {
                 </div>
 
                 {/* All-Access Fest Pass (Featured) */}
-                <div className="relative p-5 rounded-2xl bg-gradient-to-b from-[#2a1352] to-[#170a35] border-2 border-amber-400 shadow-[0_0_25px_rgba(245,195,68,0.25)] flex flex-col justify-between">
+                <div className="relative p-5 rounded-2xl glass-card-featured border-2 border-amber-400 shadow-[0_0_25px_rgba(245,195,68,0.25)] flex flex-col justify-between">
                   <div className="absolute -top-3 right-4 px-2.5 py-0.5 rounded-full bg-amber-400 text-[#15072e] text-[10px] font-extrabold uppercase">
                     Most Popular
                   </div>
@@ -343,7 +343,7 @@ export default function FestModal({ activeModal, onClose }) {
                 </div>
 
                 {/* VIP Lounge Pass */}
-                <div className="p-5 rounded-2xl bg-purple-950/40 border border-purple-800/50 flex flex-col justify-between hover:border-amber-400/50 transition-all">
+                <div className="p-5 rounded-2xl glass-card flex flex-col justify-between hover:border-amber-400/50 transition-all">
                   <div>
                     <span className="text-xs uppercase tracking-wider text-purple-300">VIP Experience</span>
                     <h4 className="font-cinzel text-xl font-bold text-amber-300 mt-1">VIP Golden Pass</h4>

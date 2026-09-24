@@ -26,7 +26,7 @@ export default function AboutSection() {
   const stats = [
     { number: '15,000+', label: 'Footfall & Attendees' },
     { number: '40+', label: 'Flagship Events' },
-    { number: '₹5,00,000+', label: 'Prize & Accolades' },
+    { number: '₹2,00,000', label: 'Prize Pool' },
     { number: '50+', label: 'Colleges Represented' },
   ];
 
@@ -48,19 +48,19 @@ export default function AboutSection() {
         </div>
 
         {/* Featured Story Card */}
-        <div className="relative rounded-3xl p-6 sm:p-10 bg-gradient-to-br from-[#1a0c3b]/90 via-[#13072b]/95 to-[#0d041c]/90 border border-purple-700/50 shadow-[0_10px_50px_rgba(0,0,0,0.6)] backdrop-blur-xl mb-12 overflow-hidden">
+        <div className="relative rounded-3xl p-6 sm:p-10 glass-card-featured mb-12 overflow-hidden">
           {/* Subtle Ambient Backlight */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-amber-500/10 via-pink-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-4 flex justify-center">
-              <div className="relative w-44 h-44 sm:w-56 sm:h-56 rounded-2xl overflow-hidden p-3 bg-purple-950/50 border border-amber-400/30 shadow-[0_0_30px_rgba(245,195,68,0.15)] group">
+              <div className="relative w-44 h-44 sm:w-56 sm:h-56 rounded-2xl overflow-hidden p-3 glass-card-subtle group">
                 <img
                   src="/dharohar-logo.png"
                   alt="Dharohar Mascot"
                   className="w-full h-full object-contain filter drop-shadow group-hover:scale-105 transition-transform duration-500"
                   onError={(e) => {
-                    e.currentTarget.src = "/Dharohar/Dharohar_logo_cropped-removebg-preview.png";
+                    e.currentTarget.style.display = 'none';
                   }}
                 />
               </div>
@@ -90,10 +90,10 @@ export default function AboutSection() {
             return (
               <div
                 key={idx}
-                className="group relative p-6 rounded-2xl bg-[#14082c]/80 border border-purple-800/40 hover:border-amber-400/50 hover:bg-[#1c0c3d]/90 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 shadow-lg"
+                className="glass-card group relative p-6 sm:p-7 rounded-2xl hover:-translate-y-1.5"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 rounded-xl bg-purple-900/40 border border-purple-700/50 text-amber-300 group-hover:scale-110 group-hover:text-amber-200 transition-all">
+                  <div className="p-3 rounded-xl glass-card-subtle text-amber-300 group-hover:scale-110 group-hover:text-amber-200 transition-all">
                     <Icon className="w-5 h-5" />
                   </div>
                   <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-purple-950/60 text-purple-300 border border-purple-800/60">
@@ -112,7 +112,7 @@ export default function AboutSection() {
         </div>
 
         {/* Stats Strip */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 sm:p-8 rounded-2xl bg-purple-950/40 border border-purple-800/50 backdrop-blur-md">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 sm:p-8 rounded-2xl glass-card-subtle">
           {stats.map((s, i) => (
             <div key={i} className="text-center p-2">
               <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold gold-text-gradient font-cinzel">

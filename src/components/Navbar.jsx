@@ -79,7 +79,7 @@ export default function Navbar({ onOpenPassModal }) {
               alt="Dharohar Fest Logo"
               className="w-full h-full object-contain filter drop-shadow group-hover:scale-105 transition-transform duration-300"
               onError={(e) => {
-                e.currentTarget.src = "/Dharohar/Dharohar_logo_cropped-removebg-preview.png";
+                e.currentTarget.style.display = 'none';
               }}
             />
           </div>

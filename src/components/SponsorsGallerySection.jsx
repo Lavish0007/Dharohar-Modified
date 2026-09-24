@@ -14,7 +14,7 @@ export default function SponsorsGallerySection({ onOpenPassModal }) {
   const sponsors = [
     { name: 'boAt Lifestyle', logo: '/boat-logo.svg', tag: 'Official Audio Partner' },
     { name: 'Spotify India', logo: 'https://www.logo.wine/a/logo/Spotify/Spotify-Logo.wine.svg', tag: 'Streaming Partner' },
-    { name: 'Thums Up', logo: '/thums-up-logo.svg', tag: 'Beverage Partner' },
+    { name: 'Coca-Cola', logo: '/Coca-Cola-Logo.wine.svg', tag: 'Beverage Partner' },
     { name: 'Zomato', logo: 'https://logos-world.net/wp-content/uploads/2020/11/Zomato-Logo.png', tag: 'Food Partner' },
     { name: 'Paytm', logo: 'https://download.logo.wine/logo/Paytm/Paytm-Logo.wine.png', tag: 'Payments Partner' },
     { name: 'Hostinger', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Hostinger_Logo.png', tag: 'Web Hosting Partner' },
@@ -65,7 +65,7 @@ export default function SponsorsGallerySection({ onOpenPassModal }) {
           {galleryItems.map((item, idx) => (
             <div
               key={idx}
-              className="group relative h-64 sm:h-72 rounded-2xl overflow-hidden bg-purple-950/40 border border-purple-800/40 shadow-lg hover:shadow-[0_0_25px_rgba(245,195,68,0.25)] transition-all duration-500"
+              className="group relative h-64 sm:h-72 rounded-2xl overflow-hidden glass-card shadow-lg hover:shadow-[0_0_25px_rgba(245,195,68,0.35)] transition-all duration-500"
             >
               <img
                 src={item.src}
@@ -79,7 +79,7 @@ export default function SponsorsGallerySection({ onOpenPassModal }) {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0e0422] via-[#0e0422]/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
 
               <div className="absolute top-3 right-3">
-                <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-purple-950/80 text-amber-300 border border-purple-700/60 backdrop-blur-md">
+                <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full glass-card-subtle text-amber-300">
                   {item.category}
                 </span>
               </div>
@@ -116,10 +116,10 @@ export default function SponsorsGallerySection({ onOpenPassModal }) {
           {passes.map((pass, i) => (
             <div
               key={i}
-              className={`relative p-6 sm:p-8 rounded-3xl backdrop-blur-xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 ${
+              className={`relative p-6 sm:p-8 rounded-3xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 ${
                 pass.popular
-                  ? 'bg-gradient-to-b from-[#2a1352] to-[#150a30] border-2 border-amber-400 shadow-[0_0_35px_rgba(245,195,68,0.3)]'
-                  : 'bg-[#14082c]/85 border border-purple-800/50 hover:border-amber-400/40 shadow-xl'
+                  ? 'glass-card-featured border-2 border-amber-400/80 shadow-[0_0_40px_rgba(245,195,68,0.35)]'
+                  : 'glass-card hover:border-amber-400/60'
               }`}
             >
               {pass.popular && (
@@ -183,7 +183,7 @@ export default function SponsorsGallerySection({ onOpenPassModal }) {
           {sponsors.map((s, idx) => (
             <div
               key={idx}
-              className="group p-6 rounded-2xl bg-[#14082c]/80 border border-purple-800/40 hover:border-amber-400/50 hover:bg-[#1a0a38]/90 backdrop-blur-md transition-all duration-300 flex flex-col items-center justify-center text-center shadow-md hover:-translate-y-1"
+              className="glass-card group p-6 rounded-2xl flex flex-col items-center justify-center text-center shadow-md hover:-translate-y-1.5"
             >
               <div className="h-16 flex items-center justify-center mb-3 group-hover:scale-105 transition-transform duration-300">
                 <img

@@ -78,13 +78,13 @@ export default function ParticlesBackground() {
     let particles = [];
 
     const initParticles = () => {
-      // Density: around 110-150 on desktop, 60 on mobile
-      const count = Math.min(160, Math.max(65, Math.floor((width * height) / 9000)));
+      // Density: around 260-340 on desktop, 130 on mobile
+      const count = Math.min(340, Math.max(130, Math.floor((width * height) / 4600)));
       particles = [];
 
       for (let i = 0; i < count; i++) {
-        const isBall = Math.random() < 0.38; // 38% larger glowing balls, 62% light grains
-        const radius = isBall ? Math.random() * 2.2 + 2.5 : Math.random() * 1.3 + 1.2;
+        const isBall = Math.random() < 0.58; // 58% glowing balls, 42% stardust grains
+        const radius = isBall ? Math.random() * 2.4 + 2.2 : Math.random() * 1.4 + 1.1;
         const color = colorPalette[Math.floor(Math.random() * colorPalette.length)];
 
         particles.push({
@@ -92,12 +92,12 @@ export default function ParticlesBackground() {
           y: Math.random() * height,
           vx: 0,
           vy: 0,
-          driftX: (Math.random() - 0.5) * 0.4,
-          driftY: (Math.random() - 0.5) * 0.4 - 0.12, // Gentle organic upward float
+          driftX: (Math.random() - 0.5) * 0.45,
+          driftY: (Math.random() - 0.5) * 0.45 - 0.12, // Gentle organic upward float
           radius,
           isBall,
           color,
-          baseAlpha: Math.random() * 0.4 + 0.45,
+          baseAlpha: Math.random() * 0.45 + 0.45,
           pulseSpeed: Math.random() * 0.035 + 0.015,
           pulsePhase: Math.random() * Math.PI * 2,
         });

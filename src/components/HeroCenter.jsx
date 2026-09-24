@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Calendar, MapPin, ArrowRight, Play, Trophy, ChevronDown } from 'lucide-react';
+import { Sparkles, Calendar, MapPin, ArrowRight, Play, Trophy } from 'lucide-react';
 
 export default function HeroCenter() {
   const scrollTo = (id) => {
@@ -28,14 +28,11 @@ export default function HeroCenter() {
         style={{ animationDelay: '350ms' }}
         className="opacity-0 animate-fade-in-up relative flex flex-col items-center select-none group my-1 sm:my-2"
       >
-        {/* Subtle Radial Backlight behind Hindi Title */}
-        <div className="absolute -inset-4 bg-gradient-to-r from-amber-500/10 via-purple-600/20 to-amber-500/10 rounded-full blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+        {/* Subtle Warm Golden Radial Backlight behind Hindi Title */}
+        <div className="absolute -inset-8 bg-gradient-to-r from-amber-400/15 via-yellow-300/20 to-amber-400/15 rounded-full blur-3xl opacity-75 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
         <h1 
-          className="relative font-hindi text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-[0.18em] sm:tracking-[0.22em] text-center gold-text-gradient gold-glow transition-transform duration-500 hover:scale-[1.02] cursor-default"
-          style={{
-            textShadow: '0 4px 30px rgba(0, 0, 0, 0.7), 0 0 40px rgba(245, 195, 68, 0.45)',
-          }}
+          className="relative font-hindi text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-[0.18em] sm:tracking-[0.22em] text-center gold-text-light gold-glow transition-transform duration-500 hover:scale-[1.02] cursor-default"
         >
           ध&nbsp;&nbsp;रो&nbsp;&nbsp;ह&nbsp;&nbsp;र
         </h1>
@@ -74,7 +71,7 @@ export default function HeroCenter() {
         </div>
         <div className="flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-purple-900/40 border border-purple-700/40 hidden sm:flex">
           <Trophy className="w-3.5 h-3.5 text-amber-400" />
-          <span className="text-amber-300 font-medium">₹5,00,000+ Prizes</span>
+          <span className="text-amber-300 font-medium">₹2,00,000 Prize Pool</span>
         </div>
       </div>
 
@@ -108,16 +105,6 @@ export default function HeroCenter() {
         >
           <span>About Fest</span>
         </button>
-      </div>
-
-      {/* 6. Bouncing Scroll Down Prompt */}
-      <div 
-        onClick={() => scrollTo('#about')}
-        className="mt-12 sm:mt-16 flex flex-col items-center gap-1.5 cursor-pointer text-purple-300/60 hover:text-amber-300 transition-colors animate-bounce"
-        title="Scroll down to explore"
-      >
-        <span className="text-[10px] uppercase tracking-[0.25em] font-semibold">Scroll to explore</span>
-        <ChevronDown className="w-4 h-4 text-amber-400" />
       </div>
     </section>
   );

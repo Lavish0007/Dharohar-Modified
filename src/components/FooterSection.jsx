@@ -16,7 +16,7 @@ export default function FooterSection() {
               alt="Dharohar Logo"
               className="w-full h-full object-contain filter drop-shadow"
               onError={(e) => {
-                e.currentTarget.src = "/Dharohar/Dharohar_logo_cropped-removebg-preview.png";
+                e.currentTarget.style.display = 'none';
               }}
             />
           </div>

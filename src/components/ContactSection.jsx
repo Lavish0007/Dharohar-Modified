@@ -10,19 +10,19 @@ export default function ContactSection() {
       name: 'Lavish Patel',
       role: 'EVENT COORDINATOR',
       email: 'lavishpatel@gmail.com',
-      phone: '+916307967123',
+      phone: '+919800000033',
     },
     {
       name: 'Udisha Verma',
       role: 'EVENT COORDINATOR',
       email: 'udishaverma@gmail.com',
-      phone: '+918287465123',
+      phone: '+919800000064',
     },
     {
       name: 'Vidushi Srivastava',
       role: 'EVENT COORDINATOR',
       email: 'vidushisrivastava@gmail.com',
-      phone: '+918800147123',
+      phone: '+919800000071',
     },
   ];
 
@@ -86,7 +86,7 @@ export default function ContactSection() {
             <div
               key={person.name}
               onMouseMove={handleCardMouseMove}
-              className="cursor-gradient-card group relative p-6 sm:p-7 rounded-2xl border border-purple-800/50 bg-[#160b35]/85 backdrop-blur-xl flex flex-col justify-between shadow-[0_4px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_10px_35px_rgba(255,0,212,0.25)] transition-all duration-300"
+              className="cursor-gradient-card glass-card group relative p-6 sm:p-7 rounded-2xl flex flex-col justify-between hover:-translate-y-1.5"
             >
               <div>
                 {/* Event Coordinator Magenta/Pink Italic Title matching user reference */}
@@ -105,7 +105,7 @@ export default function ContactSection() {
                 {/* Contact Items with Copy Buttons */}
                 <div className="space-y-3 text-xs sm:text-sm">
                   {/* Email Box */}
-                  <div className="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-purple-950/70 border border-purple-800/40 group-hover:border-purple-600/60 transition-colors">
+                  <div className="flex items-center justify-between gap-2 p-2.5 rounded-xl glass-card-subtle group-hover:border-purple-500/40 transition-colors">
                     <a
                       href={`mailto:${person.email}`}
                       className="flex items-center gap-2.5 text-purple-200 hover:text-pink-300 transition-colors truncate"
@@ -130,7 +130,7 @@ export default function ContactSection() {
                   </div>
 
                   {/* Phone Box */}
-                  <div className="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-purple-950/70 border border-purple-800/40 group-hover:border-purple-600/60 transition-colors">
+                  <div className="flex items-center justify-between gap-2 p-2.5 rounded-xl glass-card-subtle group-hover:border-purple-500/40 transition-colors">
                     <a
                       href={`tel:${person.phone}`}
                       className="flex items-center gap-2.5 text-purple-200 hover:text-amber-300 transition-colors font-medium tracking-wide"
@@ -176,7 +176,7 @@ export default function ContactSection() {
         {/* Venue Location & Campus Desk Info Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Venue Card */}
-          <div className="p-6 rounded-3xl bg-purple-950/40 border border-purple-800/50 backdrop-blur-xl flex items-start gap-4">
+          <div className="p-6 sm:p-7 rounded-3xl glass-card flex items-start gap-4 hover:-translate-y-1">
             <div className="p-3 rounded-2xl bg-amber-400/10 border border-amber-400/30 text-amber-400 flex-shrink-0 mt-0.5">
               <MapPin className="w-6 h-6" />
             </div>
@@ -195,7 +195,7 @@ export default function ContactSection() {
           </div>
 
           {/* Central Helpdesk Card */}
-          <div className="p-6 rounded-3xl bg-purple-950/40 border border-purple-800/50 backdrop-blur-xl flex items-start gap-4">
+          <div className="p-6 sm:p-7 rounded-3xl glass-card flex items-start gap-4 hover:-translate-y-1">
             <div className="p-3 rounded-2xl bg-pink-500/10 border border-pink-500/30 text-pink-400 flex-shrink-0 mt-0.5">
               <MessageSquare className="w-6 h-6" />
             </div>

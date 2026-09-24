@@ -146,7 +146,7 @@ export default function ScheduleSection() {
             className={`px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${
               activeDay === 'all'
                 ? 'bg-gradient-to-r from-amber-400 to-amber-500 text-purple-950 shadow-[0_0_20px_rgba(245,195,68,0.4)]'
-                : 'bg-purple-950/40 text-purple-200 border border-purple-800/40 hover:border-amber-400/50 hover:text-white'
+                : 'glass-card-subtle text-purple-200 hover:text-white'
             }`}
           >
             All 3 Days
@@ -158,7 +158,7 @@ export default function ScheduleSection() {
               className={`px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center gap-2 ${
                 activeDay === d.id
                   ? 'bg-gradient-to-r from-amber-400 to-amber-500 text-purple-950 shadow-[0_0_20px_rgba(245,195,68,0.4)]'
-                  : 'bg-purple-950/40 text-purple-200 border border-purple-800/40 hover:border-amber-400/50 hover:text-white'
+                  : 'glass-card-subtle text-purple-200 hover:text-white'
               }`}
             >
               <span>{d.dayNumber}</span>
@@ -172,7 +172,7 @@ export default function ScheduleSection() {
           {filteredDays.map((dayGroup) => (
             <div
               key={dayGroup.id}
-              className="p-6 sm:p-8 rounded-3xl bg-[#14082c]/85 border border-purple-800/50 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.5)]"
+              className="p-6 sm:p-8 rounded-3xl glass-card-featured"
             >
               {/* Day Header Banner */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-purple-800/40 pb-5 mb-6">
@@ -197,7 +197,7 @@ export default function ScheduleSection() {
                 {dayGroup.events.map((ev, idx) => (
                   <div
                     key={idx}
-                    className="group p-4 sm:p-5 rounded-2xl bg-purple-950/40 border border-purple-800/30 hover:border-amber-400/40 hover:bg-purple-900/30 transition-all duration-300 flex flex-col justify-between"
+                    className="glass-card group p-5 rounded-2xl flex flex-col justify-between hover:-translate-y-1"
                   >
                     <div>
                       <div className="flex items-center justify-between gap-2 mb-2">
