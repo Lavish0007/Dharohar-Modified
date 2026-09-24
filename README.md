@@ -1,105 +1,191 @@
-# FSD-Mini-Project
+# 🎭 Dharohar — Annual Cultural Fest Website
 
-# Dharohar - ABES Engineering College Fest Website 🎉
+<div align="center">
 
-**Dharohar** is the official website for the annual cultural fest of ABES Engineering College. It provides a vibrant, responsive, and interactive platform for attendees, organizers, and sponsors to connect, explore event details, purchase tickets, and view media from past events.
+![Dharohar Banner](public/dharohar-logo.png)
 
-## 🌐 Project Overview
+### **धरोहर 2024 • Edition XVII**
+*Unite ✦ Celebrate ✦ Create*
 
-This website aims to:
+[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.4.6-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.13-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Lucide Icons](https://img.shields.io/badge/Lucide_Icons-1.16.0-F05032?style=for-the-badge&logo=lucide&logoColor=white)](https://lucide.dev/)
+[![License](https://img.shields.io/badge/License-Educational-green.svg?style=for-the-badge)](#-license)
 
-- Showcase event highlights and schedules
-- Facilitate online ticket booking
-- Provide sponsor visibility
-- Improve accessibility and engagement through responsive design and multimedia integration
+**The official modern web portal for Dharohar — the flagship annual cultural fest of ABES Engineering College, Ghaziabad.**
+
+[Key Features](#-key-features) • [Tech Stack](#-tech-stack) • [Getting Started](#-getting-started) • [Project Structure](#-project-structure) • [Festival Highlights](#-festival-highlights) • [Contributors](#-contributors)
+
+</div>
+
+---
+
+## 🌟 Overview
+
+**Dharohar (धरोहर)** is an electrifying three-day cultural extravaganza hosted annually at **ABES Engineering College**. Celebrating timeless Indian heritage fused with modern youth creativity, it unites **15,000+ attendees** and participants from over **50+ colleges across India**.
+
+This web platform serves as an interactive hub for festival-goers, participants, and sponsors to discover event lineups, explore photo galleries, book festival passes, and connect with organizers.
+
+---
+
+## ✨ Key Features
+
+- 🌌 **Interactive Physics Particles Canvas**: Custom particle background with light grains and responsive cursor repulsion physics.
+- 🎨 **Regal Cultural Aesthetics**: Golden typography, rich Indian motifs, deep obsidian & purple palettes, and backdrop blur effects.
+- 🧭 **Glassmorphic Navigation Bar**: Responsive sticky header with ScrollSpy navigation, smooth scrolling, and mobile dropdown drawer.
+- 📅 **Interactive 3-Day Schedule Explorer**: Multi-day filterable timeline covering Day 1 (*Aarambh*), Day 2 (*Utsav*), and Day 3 (*Star Night Dhamaka*).
+- 🎟️ **Pass & Ticket Booking Showcase**: Clean tier breakdown for Student General Passes, All-Access Festival Passes, and VIP Golden Lounge Passes.
+- 🖼️ **Dynamic Picture Gallery**: Curated photo grid capturing dance competitions, rock battles, thespian acts, and carnival attractions.
+- 🤝 **Sponsor Showcase**: Brand partner visibility featuring BoAt, Spotify, Coca-Cola, Zomato, Paytm, and Hostinger.
+- 📇 **Interactive Coordinator Directory**: Contact cards with dynamic cursor-tracking radial gradients, 1-click clipboard copy for emails/phones, and direct mail/call triggers.
+- 🪟 **Universal Modal System**: Accessible dialog overlays with keyboard support (`Escape` key navigation) for in-depth information.
+- 📱 **Fully Responsive**: Optimized fluid layouts tested across mobile, tablet, and widescreen desktop displays.
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|---|---|
+| **Frontend Library** | [React 18](https://react.js.org/) |
+| **Build Tool & Bundler** | [Vite 5](https://vitejs.dev/) |
+| **Styling & CSS** | [Tailwind CSS 3](https://tailwindcss.com/) with PostCSS & Autoprefixer |
+| **Iconography** | [Lucide React](https://lucide.dev/) |
+| **Typography** | Cinzel, Montserrat, Rozha One & Google Fonts |
+| **Deployment** | GitHub Pages / Vercel / Netlify |
+
+---
 
 ## 📁 Project Structure
 
-├── home_page_images/ # Images used on the home page
-├── picture_gallery_images/ # Images for the gallery section
-├── contact-us.html # Contact form and coordinator info
-├── D_faq.html # Frequently asked questions
-├── D_home.html # Main homepage
-├── Dharohar_logo_cropped.png # Official logo
-├── gallery.html # Event gallery
-├── README.md # Project overview and instructions
-├── refund_policy.html # Ticket refund and cancellation policy
-├── schedule.html # Full event schedule
-├── style.css # Website styling
-├── tickets.html # Ticket booking page
+```text
+Dharohar-A-College-Fest-Website/
+├── public/                     # Static assets & vendor logos
+│   ├── dharohar-logo.png       # Official festival mascot & insignia
+│   ├── boat-logo.svg           # boAt sponsor logo
+│   └── Coca-Cola-Logo.wine.svg # Beverage partner logo
+├── home_page_images/           # High-resolution event imagery
+├── picture_gallery_images/     # Archival photo gallery captures
+├── src/
+│   ├── components/             # Modular React components
+│   │   ├── Navbar.jsx          # Sticky glass header with ScrollSpy
+│   │   ├── HeroCenter.jsx      # Regal Hindi hero banner & quick stats
+│   │   ├── AboutSection.jsx    # Festival background, stats, & pillars
+│   │   ├── ScheduleSection.jsx # Day 1, Day 2, Day 3 interactive timeline
+│   │   ├── SponsorsGallerySection.jsx # Gallery & sponsor showcase
+│   │   ├── ContactSection.jsx  # Coordinator cards with cursor glow
+│   │   ├── FooterSection.jsx   # Footer with quick links & college info
+│   │   ├── FestModal.jsx       # Multi-purpose modal dialog system
+│   │   ├── ParticlesBackground.jsx # Custom HTML5 particle physics canvas
+│   │   └── WaveBackground.jsx  # Smooth SVG decorative wave transition
+│   ├── App.jsx                 # Main application layout & state
+│   ├── index.css               # Global Tailwind CSS directives & themes
+│   └── main.jsx                # React DOM entry point
+├── index.html                  # HTML5 application template
+├── tailwind.config.js          # Custom colors, fonts, and animation tokens
+├── vite.config.js              # Vite bundler configuration
+└── package.json                # Project dependencies and npm scripts
+```
 
-## 🚀 How to Run the Project
+---
 
-1. Clone the repository:
-   git clone https://github.com/your-username/dharohar-website.git
-   cd dharohar-website
+## 🚀 Getting Started
 
-2. Open `D_home.html` in a web browser.
+Follow these steps to run Dharohar locally on your system:
 
-> 💡 No backend is required for this version. All interactions are handled on the front end using HTML and CSS.
+### Prerequisites
 
-## 📌 Features
+Ensure you have **Node.js** (v16.0 or higher) and **npm** installed:
+```bash
+node -v
+npm -v
+```
 
-- Responsive and accessible design \[1]\[2]
-- Dynamic gallery and visual effects \[3]\[5]
-- Ticket booking UI with refund policy
-- Sponsor and event information sections
-- Navigation and contact pages
+### 1. Clone the Repository
 
-## 🔧 Technologies Used
+```bash
+git clone https://github.com/Lavish0007/Dharohar-Modified.git
+cd Dharohar-Modified
+```
 
-- HTML5 & CSS3
-- Responsive design using media queries
-- Accessibility standards (WCAG 2.1 compliant) [2][8]
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run Development Server
+
+```bash
+npm run dev
+```
+
+Open your browser and navigate to:
+```text
+http://localhost:5173
+```
+
+### 4. Build for Production
+
+```bash
+npm run build
+```
+The optimized production bundle will be generated in the `dist/` directory.
+
+### 5. Preview Production Build
+
+```bash
+npm run preview
+```
+
+---
+
+## 🎪 Festival Highlights
+
+| Metric | Detail |
+|---|---|
+| 🏛️ **Venue** | ABES Engineering College, 19th KM Stone, NH-09, Ghaziabad, UP |
+| 🗓️ **Dates** | November 14 – 16, 2024 |
+| 👥 **Expected Footfall** | 15,000+ Students & Attendees |
+| 🏆 **Flagship Events** | 40+ Competitions across Music, Dance, Dramatics & Fashion |
+| 💰 **Prize Pool** | ₹2,00,000+ in Cash & Awards |
+| 🎸 **Star Night** | Live performance by Bollywood playback artist & headliner EDM DJ |
+
+---
+
+## 📸 Screenshots
+
+<div align="center">
+
+| Hero & Theme Showcase | Schedule & Competitions |
+|:---:|:---:|
+| ![Hero Preview](image-1.png) | ![Schedule Preview](image-2.png) |
+
+| Photo Gallery & Moments | Event Coordinators & Contact |
+|:---:|:---:|
+| ![Gallery Preview](image-3.png) | ![Contact Preview](image-4.png) |
+
+| Mobile & Modal Experience |
+|:---:|
+| ![Modal Preview](image-5.png) |
+
+</div>
+
+---
+
+## 👥 Contributors
+
+This project was built with ❤️ by the team at **ABES Engineering College**:
+
+| Name | Role & Contributions | GitHub |
+|---|---|:---:|
+| **Lavish Patel** | **Full-Stack Developer**<br>System architecture, React + Vite migration, interactive components, schedule engine, and coordinator section. | [![GitHub](https://img.shields.io/badge/GitHub-Lavish0007-181717?style=flat-square&logo=github)](https://github.com/Lavish0007) |
+| **Udisha Verma** | **Frontend UI/UX Designer**<br>Design ideation, footer architecture, FAQ section, refund & ticket policy workflows. | [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=flat-square&logo=github)](#) |
+| **Vidushi Srivastava** | **Frontend Developer**<br>Landing experience, ticket booking modules, picture gallery integration, and responsive layout. | [![GitHub](https://img.shields.io/badge/GitHub-Vidushi--1012-181717?style=flat-square&logo=github)](https://github.com/Vidushi-1012) |
+
+---
 
 ## 📄 License
 
-None. This project is just for educational purposes.
-
-**References:**
-[1] Marcotte, E. (2010). _Responsive Web Design_. A Book Apart.
-[2] W3C. (2015). _Responsive Design Basics_. https://www.w3.org
-[3] Garrett, J. J. (2011). _The Elements of User Experience_. New Riders.
-[5] Duckett, J. (2014). _HTML and CSS: Design and Build Websites_. Wiley.
-[8] W3C. (2018). _Web Content Accessibility Guidelines (WCAG) 2.1_. https://www.w3.org/WAI/
-
-## Future Enhancements:
-
-Backend integration for event registration and ticket tracking
-
-User login and profile dashboards
-
-Admin panel for dynamic schedule/content updates
-
-Chatbot for live user queries
-
-Mobile application with offline access and push notifications
-
-Real-time analytics dashboard for organizers
-
-Live-streaming for virtual participation
-
-Improved accessibility support (voice nav, screen reader optimization)
-
-
-## 👩‍💻 Contributors
-
-| Name                    |                            Role & Contributions                                                  |
-|-------------------------|--------------------------------------------------------------------------------------------------|
-| **Udisha Verma**        | Frontend design ideation; Developed footer, refund policy page, and FAQ section                  |
-| **Vidushi Srivastava**  | Implemented frontend; Designed and built the Home page, Ticket Booking page, and Picture Gallery | https://github.com/Vidushi-1012
-| **Lavish Patel**        | Team Leader; Oversaw task management; Developed the Schedule and Contact Us pages                | https://github.com/Lavish0007
-
-
-
-## Implementation
-
-![alt text](image-1.png)
-
-![alt text](image-2.png)
-
-![alt text](image-3.png)
-
-![alt text](image-4.png)
-
-![alt text](image-5.png)# Dharohar-A-College-Fest-Website
+This project was developed for educational and institutional demonstration purposes for **ABES Engineering College**. All festival trademarks and sponsor brands belong to their respective copyright holders.
